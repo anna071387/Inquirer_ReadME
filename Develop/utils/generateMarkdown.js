@@ -24,12 +24,31 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(response) {
+  let additionalProjectLinks = '';
+  if (response.ProjectLinks) {
+    additionalProjectLinks = response.ProjectLinks.slit(',').join('<br>'); 
+  } 
 
-# Description
+  }
+
+  return `
+  
+  # ${response.title.toUpperCase()}
+
+## Description
+${response.description}
+`;
+
+## Screenshots
+${screenshots}
+`;
+
+# 
 ${data.description}
 `;
+
+
 }
 
 module.exports = generateMarkdown;
