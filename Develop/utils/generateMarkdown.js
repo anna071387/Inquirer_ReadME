@@ -32,9 +32,9 @@ function generateMarkdown(response) {
 
 	//Set Screenshots template according to the user iniput
 	let screenshots = '';
-	if (answers.imageURL) {
-		for (let i = 0; i < answers.imageURL.split(',').length; i++) {
-			screenshots += `<kbd>![screenshot-demo${i + 1}](${answers.imageURL.split(',')[i].trim()})</kbd>`;
+	if (response.imageURL) {
+		for (let i = 0; i < response.imageURL.split(',').length; i++) {
+			screenshots += `<kbd>![screenshot-demo${i + 1}](${response.imageURL.split(',')[i].trim()})</kbd>`;
 		}
   }
 
@@ -48,10 +48,10 @@ function generateMarkdown(response) {
     .toLowerCase()}?label=Follow&logoColor=purple&style=social)](https://github.com/${response.username.trim().toLowerCase()})
   [![project-languages-used](https://img.shields.io/github/languages/count/${response.username
     .trim()
-    .toLowerCase()}/${response.repoName.trim()}?color=important)](https://github.com/${answers.username.trim().toLowerCase()}/${answers.repoName.trim()})
+    .toLowerCase()}/${response.repoName.trim()}?color=important)](https://github.com/${response.username.trim().toLowerCase()}/${response.repoName.trim()})
   [![project-top-language](https://img.shields.io/github/languages/top/${response.username
     .trim()
-    .toLowerCase()}/${response.repoName.trim()}?color=blueviolet)](https://github.com/${answers.username.trim().toLowerCase()}/${answers.repoName.trim()})
+    .toLowerCase()}/${response.repoName.trim()}?color=blueviolet)](https://github.com/${response.username.trim().toLowerCase()}/${response.repoName.trim()})
   [![license](https://img.shields.io/badge/License-${response.license
     .toUpperCase()
     .split('-')
@@ -65,7 +65,7 @@ function generateMarkdown(response) {
     * [ User Story ](#User-Story)
     * [ Installation ](#Installation)
     * [ Usage ](#Usage)
-    * * [ License ](#License)
+    * [ License ](#License)
     * [ Contributing ](#Contributing)
     * [ Questions ](#Questions)
   #
@@ -87,6 +87,9 @@ function generateMarkdown(response) {
   
   ## Technologies 
     ${response.technologies}
+
+  ## License
+    This project is [${response.license.toUpperCase()}](https://choosealicense.com/licenses/${response.license}/) licensed.<br>
     
   ## Contribution
     ${response.credits}
@@ -101,9 +104,7 @@ function generateMarkdown(response) {
       .toLowerCase()}](https://github.com/${response.username.trim().toLowerCase()})<br>
     Email: ${response.email}
 
-    ## License
-    This project is [${response.license.toUpperCase()}](https://choosealicense.com/licenses/${response.license}/) licensed.<br />
-  `;
+    `;
 }
 
 module.exports = generateMarkdown;

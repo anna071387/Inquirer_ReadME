@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const { prompt } = require("inquirer");
-const { writeFile } = require("fs").promises;
+const { writeFile } = require("fs");
 
 
 // Generate Redme File structure linked
@@ -10,7 +10,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = require("./utils/questions");
 const { promisify }  = require("util");
 
-const writeFileAsync = promisify(generateMarkdown);
+const writeFileAsync = promisify(writeFile);
   // TODO: Create an array of questions for user input, all questions from read me file
 
 
@@ -32,7 +32,7 @@ const writeFileAsync = promisify(generateMarkdown);
     console.log(JSON.stringify(response, null, '\t'));
 
     const readme = generateMarkdown(response);
-    await writeFileAsync("ReadMe.md", readme);
+    await writeFileAsync("README.md", readme);
 
     console.log('Successfully wrote to README.md');
   }
