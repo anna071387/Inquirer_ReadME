@@ -8,28 +8,29 @@
 
 
   ## Table of Content
-    * [ Links ](#Project-Links)
-    * [ Screenshots ](#Screenshots)
-    * [ Description ](#Description)
-    * [ User Story ](#User-Story)
-    * [ Installation ](#Installation)
-    * [ Usage ](#Usage)
-    * [ License ](#License)
-    * [ Contributing ](#Contributing)
-    * [ Questions ](#Questions)
+    * [Links](#Project-Links)
+    * [Screenshots](#Screenshots)
+    * [Description](#Description)
+    * [User Story](#User-Story)
+    * [Installation](#Installation)
+    * [Usage](#Usage)
+    * [License](#License)
+    * [Contributing ](#Contributing)
+    * [Questions](#Questions)
   #
 
   ## Screenshots
-    
+
+  ![alt text](./assets/Answers-01.png)
 
   ## Description
-    undefined
+    This README GEnerator is designed to help anyone to create complete readme files at fraction of time. So you can concentrate on the important things. 
     
   ## User Story
-    undefined
+    Creating a readmefile can be a time consuming espessially when trying to create all the assets. As a user I want to create a professional readme file that includes connection to the repository to follow ,  languages specifications used, nadges for licenses, title of the project, table of contents, space to include screen shots and gifs, etc. 
 
   ## Installation
-    follow the instructions
+    This app is installed by downloading a zip file
 
   ## Usage 
     undefined
